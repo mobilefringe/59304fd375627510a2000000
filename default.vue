@@ -29,9 +29,9 @@
       },
       metaInfo () {
         return {
-          title: (this.meta !== null ? this.meta.meta_title : ""),
+          title: (this.meta.title !== null && this.meta.meta_title !== undefined ? this.meta.meta_title : ""),
           meta: [
-            {name: 'description', content: (this.meta !== null ? this.meta.meta_description : "")}
+            {name: 'description', content: (this.meta.meta_description !== null ? this.meta.meta_description : "")}
           ]
         }
       }
