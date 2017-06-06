@@ -28,7 +28,7 @@
         }
       },
       metaInfo () {
-        if (meta){
+        if (this.meta){
         console.log("help");
           return {
             title: this.meta.meta_title,
