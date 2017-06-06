@@ -32,16 +32,18 @@
           if (this.meta){
             return this.meta.meta_title;
           }
-          else{
-            return "";
-          }
         },
         getMetaDescription() {
           if (this.meta){
             return this.meta.meta_description;      
           }
+        },
+        getMetaKeywords() {
+          if (this.meta){
+            return this.meta_meta_keywords;
+          }
         }
-      },
+      }
       metaInfo () {
         return {
           title: this.getMetaTitle(),
