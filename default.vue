@@ -27,7 +27,29 @@
           return this.$store.getters.findMetaDataByPath;
         }
       },
-      
+      methods: {
+        getMetaTitle() {
+          if (this.meta){
+            return this.meta.meta_title;
+          }
+          else{
+            return "";
+          }
+        },
+        getMetaDescription() {
+          if (this.meta){
+            return this.meta.meta_description;      
+          }
+        }
+      }
+      metaInfo () {
+        return {
+          title: getMetaTitle(),
+          meta: [
+            {name: 'description', content: getMetaDescription()}
+          ]
+        }
+      }
     });
   });
 </script>
