@@ -48,7 +48,8 @@
         return {
           title: this.getMetaTitle(),
           meta: [
-            {name: 'description', content: this.getMetaDescription()}
+            {name: 'description', content: this.getMetaDescription()},
+            {name: 'keywords', content: this.getMetaKeywords()}
           ]
         }
       }
