@@ -27,14 +27,7 @@
           return this.$store.getters.findMetaDataByPath;
         }
       },
-      metaInfo () {
-        return {
-          title: (console.log(this.meta)),
-          meta: [
-            {name: 'description', content: (this.meta.meta_description !== null ? this.meta.meta_description : "")}
-          ]
-        }
-      }
+      
     });
   });
 </script>
