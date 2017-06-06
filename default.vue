@@ -6,15 +6,19 @@
   define(["Vue"], function(Vue) {
     return Vue.component("default-component", {
       template: template, // the variable template will be injected
-        
+      data: function() {
+        return {
+          metaInfo: null
+        }
+      },
       beforeRouteEnter (to, from, next) {
         next(vm => {
           // access to component instance via `vm`
-          console.log(to);
+          vm.metaInfo = vm.findMetaByPath(to.path);
         })
       },
       beforeRouteUpdate (to, from, next) {
-        console.log(to);
+        this.metaInfo = this.findMetaByPath(to.path);
       },
       computed: {
         findMetaByPath () {
