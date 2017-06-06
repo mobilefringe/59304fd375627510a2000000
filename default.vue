@@ -29,10 +29,10 @@
       }
       metaInfo () {
         return {
-          title: this.getMetaTitle(),
+          title: this.meta.meta_title,
           meta: [
-            {name: 'description', content: this.getMetaDescription()},
-            {name: 'keywords', content: this.getMetaKeywords()}
+            {name: 'description', content: this.meta.meta_description},
+            {name: 'keywords', content: this.meta.meta_keywords}
           ]
         }
       }
