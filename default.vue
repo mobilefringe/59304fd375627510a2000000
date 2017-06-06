@@ -32,15 +32,17 @@
         }
       },
       head: {
-        title () {
+        title: function () {
           return {
             title: this.meta.meta_title
           }
         },
-        meta () {
+        meta: function () {
           return {
-            {name: 'description', content: this.meta.meta_description},
-            {name: 'keywords', content: this.meta.meta_keywords}
+            meta: [
+              {name: 'description', content: this.meta.meta_description},
+              {name: 'keywords', content: this.meta.meta_keywords}
+            ]
           }
         }
       }
