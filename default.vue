@@ -41,12 +41,12 @@
             return this.meta.meta_description;      
           }
         }
-      }
+      },
       metaInfo () {
         return {
-          title: getMetaTitle(),
+          title: this.getMetaTitle(),
           meta: [
-            {name: 'description', content: getMetaDescription()}
+            {name: 'description', content: this.getMetaDescription()}
           ]
         }
       }
