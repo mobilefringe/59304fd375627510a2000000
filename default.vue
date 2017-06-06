@@ -28,6 +28,7 @@
         }
       },
       metaInfo () {
+        console.log("yo");
         if (this.meta){
         console.log("help");
           return {
