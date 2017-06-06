@@ -11,7 +11,7 @@
         return {
           meta: null
         }
-      }
+      },
       computed: {
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
