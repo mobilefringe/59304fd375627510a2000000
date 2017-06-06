@@ -26,24 +26,7 @@
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
         }
-      },
-      methods: {
-        getMetaTitle() {
-          if (this.meta) {
-            return this.meta.meta_title;
-          }
-        },
-        getMetaDescription() {
-          if (this.meta) {
-            return this.meta.meta_description;      
-          }
-        },
-        getMetaKeywords() {
-          if (this.meta) {
-            return this.meta.meta_keywords;
-          }
-        }
-      },
+      }
       metaInfo () {
         return {
           title: this.getMetaTitle(),
