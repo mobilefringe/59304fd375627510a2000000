@@ -3,8 +3,8 @@
 </template>
 
 <script>
-  define(["Vue", "vue-head"], function(Vue, VueHead) {
-    Vue.use(VueHead);
+  define(["Vue", "vue-meta"], function(Vue, Meta) {
+    Vue.use(Meta);
     return Vue.component("default-component", {
       template: template, // the variable template will be injected
       data: function() {
@@ -31,19 +31,13 @@
           return this.$store.getters.findMetaDataByPath;
         }
       },
-      head: {
-        title: function () {
-          return {
-            title: this.meta.meta_title
-          }
-        },
-        meta: function () {
-          return {
-            meta: [
-              {name: 'description', content: this.meta.meta_description},
-              {name: 'keywords', content: this.meta.meta_keywords}
-            ]
-          }
+      metaInfo () {
+        return {
+          title: this.meta.meta_title,
+          meta: [
+            {name: 'description', content: this.meta.meta_description},
+            {name: 'keywords', content: this.meta.meta_keywords}
+          ]
         }
       }
     });
