@@ -9,23 +9,29 @@
       template: template, // the variable template will be injected
       data: function() {
         return {
-          metaInfo: null
+          meta: {}
         }
       },
       beforeRouteEnter (to, from, next) {
         next(vm => {
           // access to component instance via `vm`
-          vm.metaInfo = vm.findMetaByPath(to.path);
+          vm.meta = vm.findMetaByPath(to.path);
         })
       },
       beforeRouteUpdate (to, from, next) {
-        this.metaInfo = this.findMetaByPath(to.path);
+        this.meta = this.findMetaByPath(to.path);
       },
       computed: {
         findMetaByPath () {
           return this.$store.getters.findMetaByPath;
         }
-      }        
+      },
+      metaInfo: {
+        title: this.meta.meta_title,
+        meta: [
+          {name: 'description', content: this.meta.meta_description}
+        ]
+      }
     });
   });
 </script>
