@@ -27,11 +27,13 @@
         }
       },
       metaInfo () {
-        return {
-          title: this.meta.meta_title,
-          meta: [
-            {name: 'description', content: this.meta.meta_description}
-          ]
+        if (this.meta != undefined && this.meta !== null){
+          return {
+            title: this.meta.meta_title,
+            meta: [
+              {name: 'description', content: this.meta.meta_description}
+            ]
+          }
         }
       }
     });
