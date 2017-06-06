@@ -26,7 +26,7 @@
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
         }
-      }
+      },
       metaInfo () {
         return {
           title: this.meta.meta_title,
