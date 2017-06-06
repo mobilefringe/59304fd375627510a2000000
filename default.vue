@@ -15,15 +15,15 @@
       beforeRouteEnter (to, from, next) {
         next(vm => {
           // access to component instance via `vm`
-          vm.meta = vm.findMetaByPath(to.path);
+          vm.meta = vm.findMetaDataByPath(to.path);
         })
       },
       beforeRouteUpdate (to, from, next) {
-        this.meta = this.findMetaByPath(to.path);
+        this.meta = this.findMetaDataByPath(to.path);
       },
       computed: {
-        findMetaByPath () {
-          return this.$store.getters.findMetaByPath;
+        findMetaDataByPath () {
+          return this.$store.getters.findMetaDataByPath;
         }
       },
       metaInfo () {
