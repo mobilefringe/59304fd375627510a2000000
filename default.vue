@@ -11,16 +11,7 @@
         return {
           meta: null
         }
-      },
-      beforeRouteEnter (to, from, next) {
-        next(vm => {
-          // access to component instance via `vm`
-          vm.meta = vm.findMetaDataByPath(to.path);
-        })
-      },
-      beforeRouteUpdate (to, from, next) {
-        this.meta = this.findMetaDataByPath(to.path);
-      },
+      }
       computed: {
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
