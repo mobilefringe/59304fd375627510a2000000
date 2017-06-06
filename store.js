@@ -128,7 +128,7 @@ define(['Vue', 'vuex', 'axios', 'js-cookie', 'moment', 'moment-timezone', 'lodas
       },
       findMetaDataByPath: (state, getters) => (path) => {
         let meta_data = state.meta_data.meta_data;
-        return meta_data.filter(meta => meta.path === path)
+        return meta_data.find(meta => meta.path === path)
       },
       storesByAlphaIndex: (state, getters) => {
         let stores = getters.processedStores;
