@@ -12,9 +12,30 @@
           meta: null
         }
       },
+      beforeRouteEnter (to, from, next) {
+        next(vm => {
+          // access to component instance via `vm`
+          vm.meta = vm.findMetaDataByPath(to.path);
+        })
+      },
+      beforeRouteUpdate (to, from, next) {
+        this.meta = this.findMetaDataByPath(to.path);
+        next();
+      },
       computed: {
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
+        }
+      },
+      metaInfo () {
+        if (this.meta != undefined && this.meta !== null){
+        console.log("help");
+          return {
+            title: this.meta.meta_title,
+            meta: [
+              {name: 'description', content: this.meta.meta_description}
+            ]
+          }
         }
       }
     });
