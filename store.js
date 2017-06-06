@@ -19,7 +19,7 @@ define(['Vue', 'vuex', 'axios', 'js-cookie', 'moment', 'moment-timezone', 'lodas
       },
       LOAD_META_DATA: function ({ commit }) {
         return new Promise((resolve, reject) => {
-          axios.get("/get_meta_data").then(response => {
+          axios.get("/api/v1/get_meta_data").then(response => {
             console.log(response);
             //commit('SET_META_DATA', { list: response.data })
             resolve(response);
