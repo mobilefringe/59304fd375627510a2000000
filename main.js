@@ -14,12 +14,12 @@ require.config({
     'text': 'https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min',
     'json': 'https://unpkg.com/requirejs-plugins-current@1.0.3/src/json',
     'js-cookie': 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min',
-    'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min',
-    'vue-head': 'https://unpkg.com/vue-head/vue-head'
+    'vue-meta': 'https://unpkg.com/vue-meta@1.0.4/lib/vue-meta.min'
   }
 });
 
-require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment'], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment) {
+require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', "vue-meta"], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta) {
+  Vue.use(Meta);
   Vue.use(VueRouter);
   Vue.use(Vue2Filters);
   Vue.use(VueI18n);
