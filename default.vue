@@ -28,7 +28,7 @@
         }
       },
       metaInfo () {
-        if (this.meta != undefined && this.meta !== null){
+        if (meta){
         console.log("help");
           return {
             title: this.meta.meta_title,
