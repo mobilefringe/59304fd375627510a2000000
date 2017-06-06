@@ -29,9 +29,9 @@
       },
       metaInfo () {
         return {
-          title: this.meta ? this.meta.meta_title,
+          title: "this.meta ? this.meta.meta_title",
           meta: [
-            {name: 'description', content: this.meta ? this.meta.meta_description}
+            {name: 'description', content: "this.meta ? this.meta.meta_description"}
           ]
         }
       }
