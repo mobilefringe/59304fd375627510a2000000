@@ -25,17 +25,6 @@
         findMetaDataByPath () {
           return this.$store.getters.findMetaDataByPath;
         }
-      },
-      metaInfo () {
-        if (this.meta != undefined && this.meta !== null){
-        console.log("help");
-          return {
-            title: this.meta.meta_title,
-            meta: [
-              {name: 'description', content: this.meta.meta_description}
-            ]
-          }
-        }
       }
     });
   });
