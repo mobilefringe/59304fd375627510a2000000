@@ -3,7 +3,8 @@
 </template>
 
 <script>
-  define(["Vue"], function(Vue) {
+  define(["Vue", "vue-meta"], function(Vue, Meta) {
+    Vue.use(Meta);
     return Vue.component("default-component", {
       template: template, // the variable template will be injected
       data: function() {
