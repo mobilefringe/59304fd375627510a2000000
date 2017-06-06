@@ -28,15 +28,11 @@
         }
       },
       metaInfo () {
-        console.log("yo");
-        if (this.meta){
-        console.log("help");
-          return {
-            title: this.meta.meta_title,
-            meta: [
-              {name: 'description', content: this.meta.meta_description}
-            ]
-          }
+        return {
+          title: this.meta.meta_title,
+          meta: [
+            {name: 'description', content: this.meta.meta_description}
+          ]
         }
       }
     });
