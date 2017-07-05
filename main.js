@@ -19,7 +19,6 @@ require.config({
 });
 
 require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'locales', 'moment', "vue-meta"], function (Vue, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, moment, Meta) {
-  Vue.config.devtools = true
   Vue.use(Meta);
   Vue.use(VueRouter);
   Vue.use(Vue2Filters);
@@ -48,6 +47,7 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
       }
     },
     created() {
+        Vue.config.devtools = true
       // make an async call to the data store to initialize the locale (i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
       this.$store.dispatch('INITIALIZE_LOCALE');
       
