@@ -40,6 +40,9 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
   /* bootstrap app */
   const vm = new Vue({
     el: '#app',
+    config:{
+        devtools: true
+    },
     data: function () {
       return {
         dataLoaded: false,
@@ -47,7 +50,6 @@ require(['Vue', 'vue2-filters', 'vue_router', 'routes', 'store', 'vue-i18n', 'lo
       }
     },
     created() {
-        Vue.config.devtools = true
       // make an async call to the data store to initialize the locale (i.e. it will check if there is a locale value saved in cookie, otherwise it will default to EN)
       this.$store.dispatch('INITIALIZE_LOCALE');
       
